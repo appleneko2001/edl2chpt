@@ -326,8 +326,9 @@ const TimelineViewModel = function(edi){
 		
 		r.forEach(e => {
 			const tc = e.tc - offset;
-			const t_s = tc % 60;
-			const t_m = Math.floor(tc/60);
+			if(tc < 0) throw new Error("Timecode shouldn't be negative!!! Definitely somewhere wrong, for example, offset are too large!!!");
+			const t_s = Math.floor(tc%60);
+			const t_m = Math.floor(tc/60)%60;
 			const t_h = Math.floor(tc/3600)
 			function c (n) {
 				return n.toString().padStart(2,'0');
