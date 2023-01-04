@@ -111,6 +111,6 @@ overlay{
 }
 
 
-span.ui-tag-beam{
-	padding: 2px 8px;
+.ui-tag-beam{
+	padding: 2px 8px !important;
 }

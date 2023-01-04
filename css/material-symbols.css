@@ -21,6 +21,8 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-
+a.material-symbols-rounded{
+	text-decoration:none;
+}
 .material-symbols-rounded[size="32"]{font-size: 32px;}
 .material-symbols-rounded[size="12"]{font-size: 12px; font-weight:600; line-height: 0;}

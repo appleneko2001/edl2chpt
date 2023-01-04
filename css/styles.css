@@ -75,11 +75,12 @@ overlay#ui-drop-zone:not([visible]){
 	visibility:collapse;
 }
 
-span.ui-tag-beam{
-	color: var(--contrast);
-	background-color: var(--color);
-	border-radius: 16px;
+.ui-tag-beam{
+	color: var(--contrast) !important;
+	background-color: var(--color) !important;
+	border-radius: 16px !important;
 	white-space: nowrap;
+	text-decoration:none;
 }
 
 a.ui-button{
