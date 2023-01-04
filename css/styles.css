@@ -1,0 +1,100 @@
+:root{
+	font-family: Roboto,sans-serif;
+}
+
+body[fixed]>content{
+	overflow-y:scroll;
+	scroll-behavior: smooth;
+}
+
+appbar{
+	box-shadow:0 4px 4px #00000040;
+		
+	background-color: var(--material-color);
+	color:var(--on-material-color);
+	
+	font-size: 2.15em;
+}
+
+toolbar>div[separate]{
+	background-color:var(--material-separator-color);
+}
+
+/* Table */
+
+.ui-table-wrap{
+	border: black solid 1px;
+	border-radius: 4px;
+}
+
+th, td{
+	text-align:left;
+}
+th[right], td[right]{
+	text-align:right;
+}
+
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table>:not(thead)>tr{
+	border-collapse: collapse;
+	border-top: black solid 1px;
+}
+
+.ui-notice-block>.ui-flex{
+	border: red solid 2px;
+	border-radius: 4px;
+	text-align:center;
+}
+
+
+.ui-card{
+	border-radius: 4px;
+	box-shadow:0 4px 4px #00000040;
+	display:flex;
+	flex-direction:column;
+	gap:12px;
+}
+
+.ui-card-upper{
+	display:flex;
+	justify-content:space-between;
+}
+.ui-card-title{
+	font-weight: 500;
+	font-size: 1.4em;
+}
+
+overlay#ui-drop-zone{
+	background-color:#00000080;
+}
+overlay#ui-drop-zone:not([visible]){
+	visibility:collapse;
+}
+
+span.ui-tag-beam{
+	color: var(--contrast);
+	background-color: var(--color);
+	border-radius: 16px;
+	white-space: nowrap;
+}
+
+a.ui-button{
+	padding: 4px;
+	border-radius: 4px;
+	user-select: none;
+}
+
+.ui-button[disabled]{cursor:not-allowed;opacity:0.42}
+.ui-button:not([disabled]){cursor: pointer;}
+
+a.ui-button:not([disabled]):hover,.ui-button:not([disabled]):focus {
+	background-color: var(--hover-color);
+}
+
+a.ui-button:not([disabled]):active {
+	background-color: var(--click-color);
+}

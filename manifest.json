@@ -1,0 +1,27 @@
+{
+	"short_name": "EDL2CHPT",
+	"name": "EDL to YouTube Chapters Tool",
+	"description": "A simple, easy application to convert your EDL file to YouTube chapter timeline.",
+	"scope": "./",
+	"icons": [
+		{
+			"src": "assets/webmanifest/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/webmanifest/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/webmanifest/maskable.png",
+			"sizes": "600x600",
+			"purpose": "maskable"
+		}
+	],
+	"background_color": "#bababa",
+	"display": "standalone",
+	"start_url": "./",
+	"theme_color": "#303f9f"
+}

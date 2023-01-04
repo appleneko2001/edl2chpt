@@ -1,0 +1,47 @@
+/* Palette */
+:root{
+	--material-separator-color: #00000040;
+	--button-hover-color: #00000040;
+}
+
+[palette="pri-m"]{
+	--material-color: #ab47bc;
+	--on-material-color: #fff;
+	--hover-color: #ab47bc20;
+	--click-color: #ab47bc40;
+}
+
+[palette="pri-l"]{
+	--material-color: #df78ef;
+	--on-material-color: #000;
+	--hover-color: #df78ef20;
+	--click-color: #df78ef40;
+}
+
+[palette="pri-d"]{
+	--material-color: #790e8b;
+	--on-material-color: #fff;
+	--hover-color: #790e8b20;
+	--click-color: #790e8b40;
+}
+
+[palette="sec-m"]{
+	--material-color: #5a6abf;
+	--on-material-color: #fff;
+	--hover-color: #5a6abf20;
+	--click-color: #5a6abf40;
+}
+
+[palette="sec-l"]{
+	--material-color: #8d98f2;
+	--on-material-color: #000;
+	--hover-color: #8d98f220;
+	--click-color: #8d98f240;
+}
+
+[palette="sec-d"]{
+	--material-color: #23408e;
+	--on-material-color: #fff;
+	--hover-color: #23408e20;
+	--click-color: #23408e40;
+}

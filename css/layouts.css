@@ -1,0 +1,116 @@
+
+
+html[fixed]{
+	display:contents;
+	position:fixed;
+	
+	top:0;left:0;bottom:0;right:0;
+}
+
+body[fixed]{
+	display:contents;
+	position:fixed;
+	
+	top:0;left:0;bottom:0;right:0;
+	overflow:hidden;
+}
+
+body[fixed]>content{
+	display:block;
+	height:calc(100% - 64px);
+}
+
+appbar{
+	align-items: center;
+	position:sticky;
+	display:flex;
+	height:64px;
+	justify-content:space-between;
+}
+appbar>:first-child{
+	margin-left: 12px;
+}
+appbar>:last-child{
+	margin-right: 12px;
+}
+
+toolbar{
+	display:flex;
+	gap: 8px;
+}
+
+toolbar[horizontal]{
+	flex-direction:row;
+}
+
+toolbar[horizontal]>div[separate]{
+	width:2px;
+	display:block;
+	margin:4px 8px;
+}
+
+content>div{
+	/*width:100%;*/
+	max-width:1400px;
+	margin: 0 auto;
+}
+
+/* Table layouts */
+
+th, td{
+	padding: 12px 8px;
+}
+
+table.ui-edl-data>thead>tr>th{
+	width:20%;
+	max-width:160px;
+}
+
+table.ui-edl-data>thead>tr>th[max]{
+	width:initial;
+	max-width:initial;
+}
+
+table.ui-edl-data>thead>tr>th[icon]{
+	width:64px;
+}
+
+/* UI Elements */
+/* Notice block */
+.ui-notice-block{
+	margin:32px auto;
+	width: fit-content;
+}
+
+.ui-flex{
+	display:flex;
+}
+.ui-flex[inline]{
+	display:inline-flex;
+}
+.ui-flex[vertical]{
+	flex-direction:column;
+}
+.ui-flex[spacing="16"]{gap:16px;}
+.ui-flex[spacing="32"]{gap:32px;}
+
+.ui-notice-block>.ui-flex{
+	padding: 24px;
+}
+
+
+.ui-card{
+	padding: 16px;
+}
+
+
+overlay{
+	position:fixed;
+	top:0;left:0;bottom:0;right:0;
+	display:block;
+}
+
+
+span.ui-tag-beam{
+	padding: 2px 8px;
+}
