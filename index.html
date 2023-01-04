@@ -2,18 +2,19 @@
 <html lang="en" fixed>
 	<head>
 		<meta charset="utf-8">
-		<title>Title</title>
+		<title>EDL2CHPT</title>
 		<link href="manifest.json" rel="manifest">
-		<meta content="Title" name="application-name">
+		<meta content="EDL2CHPT" name="application-name">
 		<meta content="/assets/favicons/icon.png" itemprop="image">
 		<meta content="/assets/favicons/icon.png" property="og:image">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
 	    <script>
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
-            .register("./js/serviceWorker.js")
+            .register("sw.js")
             .then(function (registration) {
               // Registration was successful
               console.log(
@@ -53,7 +54,7 @@
 		<noscript>Error: This application cannot work without JavaScript.</noscript>
 		<appbar vertical>
 		<toolbar horizontal palette="pri-m">
-		<a href="#" class="material-symbols-rounded ui-button" size="32" aria-label="Open a EDL file" title="Open a EDL file">file_open</a>
+		<a href="#" class="material-symbols-rounded ui-button" size="32" aria-label="Open a EDL file" title="Open a EDL file" data-bind="click:popupOpenEdlFile">file_open</a>
 		<div separate></div>
 		<a href="#" class="material-symbols-rounded ui-button" size="32" aria-label="Add a new element" title="Add a new element" disabled>new_label</a>
 		<a href="#" class="material-symbols-rounded ui-button" size="32" aria-label="Remove elements" title="Remove elements" disabled>label_off</a>

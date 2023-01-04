@@ -92,16 +92,16 @@ const TextReader = function(str){
 	}
 }
 
-const OpenJsonFileDialog = function(resolver, onSuccess, onFail){
+const OpenFileDialog = function(resolver, onSuccess, onFail, ext){
     function OnOpenFileInputChanged (e){
         const file = e.target.files[0];
 
         const reader = new FileReader();
         reader.onloadend = function (){
-            const json = reader.result;
+            const data = reader.result;
             const handler = function (resolve, reject){
                 try{
-                    resolver(json);
+                    resolver(data);
                     resolve();
                 }
                 catch (error){
@@ -118,7 +118,7 @@ const OpenJsonFileDialog = function(resolver, onSuccess, onFail){
     const openFileInput = document.createElement("input");
     openFileInput.onchange = OnOpenFileInputChanged;
     openFileInput.type = "file";
-    openFileInput.accept = ".json";
+    openFileInput.accept = ext;
     openFileInput.click();
     openFileInput.remove();
 }
@@ -368,6 +368,14 @@ const AppViewModel = function(){
 	
 	self.timeline = ko.observable(_);
 	
+	self.popupOpenEdlFile = function(){
+		const dialog = new OpenFileDialog((d) => {
+			const m = new EditDecisionList(d);
+			console.log(`Parsed EDL file:`,m);
+			self.timeline(new TimelineViewModel(m));
+		}, _, _, ".edl");
+	}
+	
 	self.openEdlFile = function(file){
 		new Promise((resolve,reject) => {
 			try{
@@ -376,7 +384,7 @@ const AppViewModel = function(){
 					const fileData = reader.result;
 					if(reader.result===null)return;
 					const data = new EditDecisionList(fileData);
-					console.log(`Parsed EDL file: ${data}`,data);
+					console.log(`Parsed EDL file:`,data);
 					self.timeline(new TimelineViewModel(data));
 					resolve();
 				};
